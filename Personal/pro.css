@@ -1,0 +1,101 @@
+body  {
+    background-image: url(https://i.pinimg.com/736x/c3/0e/32/c30e3289b97368072546e01d9e67c050.jpg);
+    font-family: 'MS PGothic', sans-serif;
+    letter-spacing: 1px;
+    font-weight: none;
+    color: #000;
+    text-shadow: 0px 0px 1px #000;
+    text-transform: uppercase;    
+}
+
+body:after{
+      position:fixed; /* stretch a fixed position to the whole screen */
+      top:0;
+      height:100vh; /* fix for mobile browser address bar appearing disappearing */
+      left:0;
+      right:0;
+      z-index:-1; /* needed to keep in the background */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+
+.character {
+  will-change: transform;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); 
+  width: 400px;
+  height: 400px;
+  transition: transform 0.8s ease;
+  transform-origin: center center; 
+}
+
+.character:hover {
+  transform: translate(-50%, -50%) scale(1.4); 
+}
+
+/* above is for starting page ^^^^ */
+
+#page {
+    margin: 0px auto;
+    width: 700px;
+}
+#gallery {
+    margin: 0px auto;
+    padding: 10px 10px;
+    width: 1900px;
+    height: 900px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    border-color: #000;
+}
+      
+.b1nkPolaroidGallery {
+    position: relative;
+    overflow: hidden;
+}
+.b1nkPolaroidGallery ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+    .b1nkPolaroidGallery li {
+        cursor: move;
+        display: block;
+        background: white;
+        border: 1px solid #D7D7D7;
+        position: absolute;
+    }
+    li.b1nkPolaroidGallery-active {
+        -webkit-transform : rotate(0deg) !important;
+        -ms-transform : rotate(0deg) !important;
+        -moz-transform : rotate(0deg) !important;  
+        -o-transform : rotate(0deg) !important;
+        transform : rotate(0deg) !important;
+        -webkit-box-shadow : #888 5px 5px 5px;
+        box-shadow : #888 5px 5px 5px;
+    }
+    li.ui-draggable-dragging {
+    }
+        .b1nkPolaroidGallery a { 
+            cursor: inherit;
+            display: block;
+            line-height: 0;
+        }                              
+        .b1nkPolaroidGallery img { 
+            margin: 5px;
+            border: 0px solid #D7D7D7;
+            font-size: 1pt;
+        }
+        li.b1nkPolaroidGallery-linkOk img{
+            cursor: pointer;
+        }
+        .b1nkPolaroidGallery p { 
+            text-align: center; 
+            font-size: 1.1em; 
+            font-weight: bold;
+            color: #2E2E2E;
+        }
